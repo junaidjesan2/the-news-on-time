@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import NotFound from "../pages/NotFound";
 import AuthenticateLayout from "../layouts/AuthenticateLayout";
 import SignIn from "../pages/Authenticate/SignIn";
-import SignUP from "../pages/Authenticate/SignUP";
+import DataContext from "../context/DataContext";
 
 export const Route = createBrowserRouter([
   {
@@ -14,7 +14,11 @@ export const Route = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: (
+          <DataContext>
+            <Home></Home>
+          </DataContext>
+        ),
       },
       {
         path: "*",
@@ -30,9 +34,13 @@ export const Route = createBrowserRouter([
         path: "/authenticate/signin",
         element: <SignIn></SignIn>,
       },
+      // {
+      //   path: "/ff",
+      //   element: <SignUP></SignUP>,
+      // },
       {
-        path: "/authenticate/signup",
-        element: <SignUP></SignUP>,
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },

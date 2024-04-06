@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function SignIn() {
   return (
     <div>
@@ -16,16 +18,11 @@ function SignIn() {
             </label>
             <input type="password" id="password" className="rounded-md" />
           </div>
-          <div className="py-2 flex flex-col">
-            <label htmlFor="rePass" className="font-semibold">
-              Retype your Password again
-            </label>
-            <input type="rePass" id="rePass" className="rounded-md" />
-          </div>
           <button className="bg-zinc-700 text-center py-2 w-1/2 mx-auto rounded-xl text-white font-semibold hover:bg-zinc-800 hover:rounded-2xl">
             Submit
           </button>
         </form>
+        <Link to='/ff'>Sign up</Link>
       </div>
     </div>
   );

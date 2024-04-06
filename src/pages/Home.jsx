@@ -5,7 +5,7 @@ import RightSide from "../components/homeComp/RightSide";
 export default function Home() {
   return (
     <div className="flex flex-row justify-between mx-auto">
-      <div className="w-1/4 bg-slate-400">
+      <div className="w-1/4">
         <LeftSide></LeftSide>
       </div>
       <div className="w-2/4">
